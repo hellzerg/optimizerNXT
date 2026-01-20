@@ -20,7 +20,7 @@ OptimizerNXT empowers system administrators, IT professionals, and power users t
 
 ## 🚀 Key Features
 
-| Icon | Feature | Description |
+| - | Feature | Description |
 |------|--------|-------------|
 | 🗄️ | **Registry Management** | Add, update, or delete registry keys and values efficiently. |
 | 🌐 | **DNS Control** | Switch between multiple DNS configurations quickly. |
