@@ -34,9 +34,17 @@ jobs:
 
       - name: Create release description
         run: |
-          $sha256 = Get-FileHash "./optimizerNXT/bin/Release/optimizerNXT.exe" -Algorithm SHA256
-          $bodyPath = "./release-body.md" 
-          "SHA256: $($sha256.Hash)" | Out-File -Encoding UTF8 $bodyPath
+          $exePath = "./optimizerNXT/bin/Release/optimizerNXT.exe"
+          $bodyPath = "./release-body.md"
+          $changelogUrl = "https://github.com/hellzerg/optimizerNXT/blob/main/CHANGELOG.md"
+          $sha256 = Get-FileHash "$exePath" -Algorithm SHA256
+
+          $releaseBody = @"
+          SHA256: $($sha256.Hash)
+          View changelog ➡ $changelogUrl
+          "@
+
+          $releaseBody | Out-File -Encoding UTF8 $bodyPath
 
       - name: Create release with tag
         uses: ncipollo/release-action@v1
