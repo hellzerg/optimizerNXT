@@ -33,10 +33,21 @@ jobs:
           /p:DebugType=none
           /m
 
-      - name: Create release with tag
-        uses: ncipollo/release-action@v1
-        with:
-          tag: v0.0.0
-          name: Release v0.0.0
-          body: Automated build release
-          files: optimizerNXT\bin\Release\optimizerNXT.exe
+      - name: Check if build output exists
+        shell: pwsh
+        run: |
+          ls "./optimizerNXT/bin/Release/"
+          $file = "./optimizerNXT/bin/Release/optimizerNXT.exe"
+          if (Test-Path $file) {
+            Write-Host "✅ File exists: $file"
+          } else {
+            Write-Host "❌ File not found: $file"
+          }
+
+      # - name: Create release with tag
+      #   uses: ncipollo/release-action@v1
+      #   with:
+      #     tag: v0.0.0
+      #     name: Release v0.0.0
+      #     body: Automated build release
+      #     files: optimizerNXT\bin\Release\optimizerNXT.exe
