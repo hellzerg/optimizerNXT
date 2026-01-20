@@ -51,7 +51,18 @@ OptimizerNXT uses **YAML-driven configurations** with support for:
 - Multiple operations per YAML  
 - Conditional execution based on environment or system state  
 - Sequenced tasks with dependencies  
-- Only YAML files **signed with the repo's PFX certificate** are executed. Unsigned or tampered files will be rejected.  
+- Only YAML files **signed with the repo's PFX certificate** are executed. Unsigned or tampered files will be rejected. 
+
+> ⚠ **IMPORTANT:** Each YAML file must have a corresponding `.sig` file with the **same filename** in the same location.  
+
+### Example Usage
+```powershell
+# Run a specific YAML configuration
+optimizerNXT.exe apply "<yaml_file>"
+
+# Run a folder containing many YAML files
+optimizerNXT.exe apply "<yaml_folder>"
+```
 
 ---
 
