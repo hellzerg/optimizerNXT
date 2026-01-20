@@ -40,7 +40,7 @@ jobs:
       - name: Create release with tag
         uses: ncipollo/release-action@v1
         with:
-          tag: v0.0.1
-          name: Release v0.0.1
+          tag: v0.0.2
+          name: Release v0.0.2
           bodyFile: "./release-body.md"
           artifacts: "./optimizerNXT/bin/Release/optimizerNXT.exe"
