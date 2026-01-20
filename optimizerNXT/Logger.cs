@@ -46,7 +46,7 @@ namespace optimizerNXT {
                 if (level.Equals("error", StringComparison.OrdinalIgnoreCase))
                     color = ConsoleColor.Red;
                 else if (level.Equals("warn", StringComparison.OrdinalIgnoreCase))
-                    color = ConsoleColor.Yellow; // closest to orange
+                    color = ConsoleColor.Yellow;
                 else if (level.Equals("info", StringComparison.OrdinalIgnoreCase))
                     color = ConsoleColor.Green;
 

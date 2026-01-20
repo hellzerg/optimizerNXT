@@ -29,8 +29,8 @@ namespace optimizerNXT {
             Logger.Info($"-------------------------------------------------------------");
             if (IsUpdateAvailable())
             {
-                Logger.Info($"Update is available: v{Program.LatestVersion}");
-                Logger.Info($"Consider updating");
+                Logger.Warn($"Update is available: v{Program.LatestVersion}");
+                Logger.Warn($"Consider updating");
                 Logger.Info($"-------------------------------------------------------------");
             }
         }

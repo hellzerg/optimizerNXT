@@ -30,10 +30,17 @@ jobs:
           /p:DebugType=none
           /m
 
+      - name: Create release description
+        run: >
+          $sha256 = Get-FileHash "./optimizerNXT\bin\Release\optimizerNXT.exe" -Algorithm SHA256
+          $bodyPath = "./release-body.md"
+          "SHA256: $($sha256.Hash)" | Out-File -Encoding UTF8 $bodyPath
+
+
       - name: Create release with tag
         uses: ncipollo/release-action@v1
         with:
           tag: v0.0.1
           name: Release v0.0.1
-          body: Automated build release
-          files: "./optimizerNXT/bin/Release/optimizerNXT.exe"
+          bodyFile: "./release-body.md"
+          artifacts: "./optimizerNXT/bin/Release/optimizerNXT.exe"
