@@ -2,9 +2,9 @@
 
 ### The finest Windows Optimizer CLI
 
-OptimizerNXT is a **powerful, YAML-driven CLI tool** for automating Windows tweaks, managing system services, controlling processes, and optimizing workflows—all from the command line.  
-
 <img src="https://raw.githubusercontent.com/hellzerg/optimizerNXT/refs/heads/main/images/banner.svg">
+
+OptimizerNXT is a **powerful, YAML-driven CLI tool** for automating Windows tweaks, managing system services, controlling processes, and optimizing workflows—all from the command line.  
 
 <a href="https://github.com/hellzerg/OptimizerNXT/releases/latest/download/optimizerNXT.exe">
     <img src="https://raw.githubusercontent.com/hellzerg/optimizerNXT/refs/heads/main/images/download.svg">
