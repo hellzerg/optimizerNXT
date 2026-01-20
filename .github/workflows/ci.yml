@@ -51,7 +51,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ github.ref_name }}
-          name: OptimizerNXT ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
           allowUpdates: true
           replacesArtifacts: true
           bodyFile: "./release-body.md" 
