@@ -18,9 +18,6 @@ jobs:
       - name: Restore NuGet packages
         run: nuget restore
 
-      - name: Create release folder
-        run: 
-
       - name: Build app
         run: >
           msbuild
@@ -33,21 +30,10 @@ jobs:
           /p:DebugType=none
           /m
 
-      - name: Check if build output exists
-        shell: pwsh
-        run: |
-          ls "./optimizerNXT/bin/Release/"
-          $file = "./optimizerNXT/bin/Release/optimizerNXT.exe"
-          if (Test-Path $file) {
-            Write-Host "✅ File exists: $file"
-          } else {
-            Write-Host "❌ File not found: $file"
-          }
-
-      # - name: Create release with tag
-      #   uses: ncipollo/release-action@v1
-      #   with:
-      #     tag: v0.0.0
-      #     name: Release v0.0.0
-      #     body: Automated build release
-      #     files: optimizerNXT\bin\Release\optimizerNXT.exe
+      - name: Create release with tag
+        uses: ncipollo/release-action@v1
+        with:
+          tag: v0.0.1
+          name: Release v0.0.1
+          body: Automated build release
+          files: "./optimizerNXT/bin/Release/optimizerNXT.exe"

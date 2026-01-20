@@ -12,7 +12,7 @@ namespace optimizerNXT {
         internal static Mutex Mutex;
         internal const string GitHubProjectUrl = "https://github.com/hellzerg/optimizer-nxt";
         internal const string DonateUrl = "https://www.paypal.com/paypalme/supportoptimizer";
-        internal const string GithubVersionUrl = "";
+        internal const string GithubVersionUrl = "https://raw.githubusercontent.com/hellzerg/optimizernxt/refs/heads/main/version.txt";
 
         const string MUTEX_GUID = @"{DEADMOON-0EFC7B8A-D1FC-467F-0117C643FE19-OPTIMIZER-NXT}";
         static bool _cliNotRunning;
