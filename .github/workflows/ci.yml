@@ -22,7 +22,8 @@ jobs:
           optimizerNXT.slnx
           /t:Build
           /p:Configuration=Release
-          /p:Platform=AnyCPU
+          /p:Platform="Any CPU"
           /p:Optimize=true
           /p:Prefer32Bit=false
+          /p:DebugType=none
           /m
