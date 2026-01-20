@@ -7,9 +7,7 @@ OptimizerNXT is a **powerful, YAML-driven CLI tool** for automating Windows twea
 <img src="https://raw.githubusercontent.com/hellzerg/optimizerNXT/refs/heads/main/images/banner.svg">
 
 <a href="https://github.com/hellzerg/OptimizerNXT/releases/latest/download/optimizerNXT.exe">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60">
-    <text x="200" y="45" font-family="Consolas, monospace" font-size="48" fill="limegreen" text-anchor="middle" letter-spacing="4">DOWNLOAD</text>
-</svg>
+    <img src="https://raw.githubusercontent.com/hellzerg/optimizerNXT/refs/heads/main/images/download.svg">
 </a>
 
 ---
