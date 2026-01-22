@@ -36,14 +36,17 @@ namespace optimizerNXT {
             var yamlAssembly = "optimizerNXT.Resources.YamlDotNet.dll";
             EmbeddedAssembly.Load(yamlAssembly, yamlAssembly.Replace("optimizerNXT.", string.Empty));
 
+            string fileOrFolder = string.Empty;
+
             if (args.Length < 2 || args[0].ToLowerInvariant() != "apply")
             {
-                Logger.Info("Usage: optimizerNXT apply <file>|<folder>");
-                Console.ReadKey();
-                return;
+                Logger.Info("Provide a YAML file or a folder containing YAML files:");
+                fileOrFolder = Console.ReadLine();
             }
-
-            var fileOrFolder = args[1];
+            else
+            {
+                fileOrFolder = args[1];
+            }
 
             if (string.IsNullOrWhiteSpace(fileOrFolder))
             {
@@ -122,6 +125,7 @@ namespace optimizerNXT {
             }
             else
             {
+                Console.Out.WriteLine("Invalid directory or YAML file.");
                 Console.Out.WriteLine("Usage: optimizerNXT apply <file>|<folder>");
                 Console.ReadKey();
                 Environment.Exit(0);
